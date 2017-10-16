@@ -372,3 +372,7 @@ TimeoutError: [Errno 110] Operation timed out
 2017-10-15 23:42:57 ERROR (Thread-217) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
 2017-10-16 04:10:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of cover.garage_door_opener is taking over 10 seconds
 2017-10-16 04:11:03 WARNING (MainThread) [homeassistant.components.cover] Updating myq cover took longer than the scheduled update interval 0:00:15
+2017-10-16 09:42:13 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2017-10-16 09:42:13 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
