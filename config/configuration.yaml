@@ -69,12 +69,18 @@ sensor:
     api_key: !secret openweathermap_api_key
     monitored_conditions:
       - weather
+      - temperature
 #  - platform: moon
-  - platform: wunderground
-    api_key: !secret wunderground_api_key
-    monitored_conditions:
-      - alerts
-      - dewpoint_c
+#  - platform: wunderground
+#    api_key: !secret wunderground_api_key
+#    monitored_conditions:
+#      - alerts
+#      - dewpoint_c
+#      - temp_c
+#      - feelslike_c
+#      - weather_1d_mertric
+#      - temp_high_1d_c
+#      - temp_low_1d_c
 
 
   
@@ -89,5 +95,16 @@ nest:
 wink:
 
 group: !include groups.yaml
+#    weather_overview:
+#    name: Weather overview
+#    entities:
+#      - sensor.pws_alerts
+#      - sensor.pws_dewpoint_c
+#      - sensor.pws_temp_c
+#      - sensor.pws_feelslike_c
+#      - sensor.pws_weather_1d_mertric
+#      - sensor.pws_temp_high_1d_c
+#      - sensor.pws_temp_low_1d_c
+
 automation: !include automations.yaml
 script: !include scripts.yaml

@@ -1,0 +1,11 @@
+#weather_overview:
+#    name: Weather overview
+#    entities:
+#      - sensor.pws_alerts
+#      - sensor.pws_dewpoint_c
+#      - sensor.pws_temp_c
+#      - sensor.pws_feelslike_c
+#      - sensor.pws_weather_1d_mertric
+#      - sensor.pws_temp_high_1d_c
+#      - sensor.pws_temp_low_1d_c
+
