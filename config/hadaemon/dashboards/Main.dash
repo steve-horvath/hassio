@@ -1,0 +1,147 @@
+#
+# Main arguments, all optional
+#
+title: Main Panel
+widget_dimensions: [122, 120]
+widget_margins: [5, 5]
+columns: 6
+#
+# Layout
+#    
+layout:
+# - COL1		COL2			COL3		COL4		COL5			COL6
+  - clock(2x1),         steve_home,             marlene_home
+  - s_alarm_upstairs,   co_alarm_upstairs,      s_alarm_main,   co_alarm_main,  s_alarm_basement,       co_alarm_basement
+  - light_master,       light_alyssa,           light_markus,   light_living,   light_dining
+  - temp_nest,          humid_nest,             set_nest,       fan_nest,       mode_nest
+  - temp_weather,       humid_weather,          high_weather,   low_weather
+  - lock.front_door_lock, cover.garage_door_opener_2,       lock_front_door, close_garage_door, reload
+
+clock:
+  widget_type: clock
+
+steve_home:
+    widget_type: device_tracker
+    title: home
+    device: steve_bb
+    icon_on: fa-male
+    icon_off: fa-male
+
+marlene_home:
+    widget_type: device_tracker
+    title: home
+    device: marlene_iphone
+    icon_on: fa-female
+    icon_off: fa-female
+
+s_alarm_upstairs:
+    widget_type: binary_sensor
+    title: Smoke Upstairs
+    entity: binary_sensor.home_upstairs_nest_protect_smoke_detected
+
+co_alarm_upstairs:
+    widget_type: binary_sensor
+    title: CO Upstairs
+    entity: binary_sensor.home_upstairs_nest_protect_co_detected
+
+s_alarm_main:
+    widget_type: binary_sensor
+    title: Smoke Main Floor
+    entity: binary_sensor.home_hallway_nest_protect_smoke_detected
+
+co_alarm_main:
+    widget_type: binary_sensor
+    title: CO Main Floor
+    entity: binary_sensor.home_hallway_nest_protect_co_detected
+
+s_alarm_basement:
+    widget_type: binary_sensor
+    title: Smoke Basement
+    entity: binary_sensor.home_basement_nest_protect_smoke_detected
+
+co_alarm_basement:
+    widget_type: binary_sensor
+    title: CO Basement
+    entity: binary_sensor.home_basement_nest_protect_co_detected
+
+light_master:
+    widget_type: reload
+    title: Reload  
+
+light_alyssa:
+    widget_type: reload
+    title: Reload  
+
+light_markus:
+    widget_type: reload
+    title: Reload  
+
+light_living:
+    widget_type: reload
+    title: Reload  
+
+light_dining:
+    widget_type: reload
+    title: Reload  
+
+temp_nest:
+    widget_type: sensor
+    title: Nest Temp
+    units: "&deg;C"
+    precision: 0
+    entity: sensor.side_temp_corrected
+
+humid_nest:
+    widget_type: reload
+    title: Reload  
+
+set_nest:
+    widget_type: reload
+    title: Reload  
+
+fan_nest:
+    widget_type: reload
+    title: Reload  
+
+mode_nest:
+    widget_type: reload
+    title: Reload  
+
+temp_weather:
+    widget_type: reload
+    title: Reload  
+
+humid_weather:
+    widget_type: reload
+    title: Reload  
+
+high_weather:
+    widget_type: reload
+    title: Reload  
+
+low_weather:
+    widget_type: reload
+    title: Reload  
+
+front_door:
+    widget_type: reload
+    title: Reload  
+
+garage_door:
+    widget_type: cover
+    title: Garage
+    entity: cover.garage_door_opener_2
+    icon_on: fa-car
+    icon_off: fa-car
+
+lock_front_door:
+    widget_type: reload
+    title: Reload  
+
+close_garage_door:
+    widget_type: reload
+    title: Reload  
+
+reload:
+    widget_type: reload
+    title: Reload  

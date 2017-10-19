@@ -9,5 +9,6 @@ HASS:
   ha_url: http://192.168.1.254:8123
   ha_key: Mercury1
 HADashboard:
-  dash_url: http://cp.local.io
+  dash_url: http://cp.local
+#  dash_url: http://stevehorvath.ddns.net
   dash_dir: /config/hadaemon/dashboards

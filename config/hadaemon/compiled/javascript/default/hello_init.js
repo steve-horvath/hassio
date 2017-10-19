@@ -28,7 +28,7 @@ $(function(){ //DOM Ready
     var widgets = {}
     // Initialize Widgets
     
-        widgets["default-label"] = new basedisplay("default-label", "http://cp.local.io:80", "default", {'widget_type': 'basedisplay', 'fields': {'title': '', 'title2': '', 'value': 'Hello World', 'unit': '', 'state_text': ''}, 'static_css': {'title_style': 'color: #fff;', 'title2_style': 'color: #fff;', 'unit_style': '', 'value_style': 'color: #fff;', 'state_text_style': 'color: #fff;', 'widget_style': 'background-color: #444;'}, 'css': {}, 'icons': [], 'static_icons': []})
+        widgets["default-label"] = new basedisplay("default-label", "http://stevehorvath.ddns.net:80", "default", {'widget_type': 'basedisplay', 'fields': {'title': '', 'title2': '', 'value': 'Hello World', 'unit': '', 'state_text': ''}, 'static_css': {'title_style': 'color: #fff;', 'title2_style': 'color: #fff;', 'unit_style': '', 'value_style': 'color: #fff;', 'state_text_style': 'color: #fff;', 'widget_style': 'background-color: #444;'}, 'css': {}, 'icons': [], 'static_icons': []})
     
 
     // Setup click handler to cancel timeout navigations
