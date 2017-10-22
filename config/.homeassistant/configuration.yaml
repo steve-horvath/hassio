@@ -1,0 +1,116 @@
+#Last edited October 18, 2017
+#customized, modified from hass.io
+
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  # from Google maps
+  latitude: 43.395640
+  longitude: -79.824550
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 153
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Toronto
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+#  base_url: https://stevehorvath.ddns.net:8123
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
+
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+cover:
+  - platform: myq
+    username: !secret myq_user
+    password: !secret myq_pass
+    type: chamberlain
+
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather prediction
+#sensor:
+#  - platform: yr
+sensor:
+  - platform: openweathermap
+    api_key: !secret openweathermap_api_key
+    monitored_conditions:
+      - weather
+      - temperature
+#  - platform: moon
+#  - platform: wunderground
+#    api_key: !secret wunderground_api_key
+#    monitored_conditions:
+#      - alerts
+#      - dewpoint_c
+#      - temp_c
+#      - feelslike_c
+#      - weather_1d_mertric
+#      - temp_high_1d_c
+#      - temp_low_1d_c
+
+
+  
+# Text to speech
+tts:
+  - platform: google
+  
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+
+wink:
+
+group: !include groups.yaml
+#    weather_overview:
+#    name: Weather overview
+#    entities:
+#      - sensor.pws_alerts
+#      - sensor.pws_dewpoint_c
+#      - sensor.pws_temp_c
+#      - sensor.pws_feelslike_c
+#      - sensor.pws_weather_1d_mertric
+#      - sensor.pws_temp_high_1d_c
+#      - sensor.pws_temp_low_1d_c
+
+automation: !include automations.yaml
+script: !include scripts.yaml

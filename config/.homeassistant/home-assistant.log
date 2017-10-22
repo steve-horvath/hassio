@@ -1,0 +1,8 @@
+2017-10-22 01:39:48 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2017-10-22 01:39:48 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
+2017-10-22 01:39:49 WARNING (MainThread) [homeassistant.setup] Setup of cover is taking over 10 seconds.
+2017-10-22 01:39:52 WARNING (MainThread) [homeassistant.setup] Setup of wink is taking over 10 seconds.
+2017-10-22 01:40:13 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
+2017-10-22 01:40:13 WARNING (MainThread) [homeassistant.setup] Setup of lock is taking over 10 seconds.
+2017-10-22 01:42:11 WARNING (Thread-6) [netdisco.ssdp] Error fetching description at https://192.168.1.17:8888
+2017-10-22 01:44:18 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
